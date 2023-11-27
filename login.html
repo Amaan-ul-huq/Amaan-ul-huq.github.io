@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/amaan website/style.css" />
+    <title>Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #706363;
+      }
+
+      header {
+        background-color: #333;
+        padding: 10px;
+        color: white;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #333;
+        overflow: hidden;
+        padding: 1%;
+        margin-right: 20%;
+        margin-left: 20%;
+      }
+
+      nav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 10px;
+        text-decoration: none;
+        padding-right: 2.9%;
+        margin-left: 2%;
+      }
+
+      nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      #login-container {
+        width: 300px;
+        margin: 50px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+        <a href="/amaan website/index.html">Home</a>
+        <a href="/amaan website/about us .html">About Us</a>
+        <a href="/amaan website/Contact us .html">Contact us</a>
+        <a href="/amaan website/packages.html">Packages</a>
+        <a href="/amaan website/sign up.html">Sign up</a>
+      <a href="/amaan website/services.html">Services</a>
+      <a href="/amaan website/login.html">Login</a>
+    </nav>
+    <div id="log">
+      <img src="/amaan website/rnn.png" id="image2" alt="Image 1" />
+    </div>
+    <div id="login-container">
+      <h2>Login</h2>
+      <form action="process-login.php" method="post">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <a href="/amaan website/index.html"
+          ><button type="button">Login</button></a
+        >
+      </form>
+    </div>
+    <footer>
+      <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

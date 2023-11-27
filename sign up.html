@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Join the straw hat crew</title>
+    <link href="/amaan website/style.css" rel="stylesheet" />
+
+    <script>
+      function validateForm() {
+        var firstName = document.forms["registrationForm"]["first_name"].value;
+        var lastName = document.forms["registrationForm"]["last_name"].value;
+        var phoneNumber =
+          document.forms["registrationForm"]["phone_number"].value;
+        var password = document.forms["registrationForm"]["password"].value;
+        var confirmPassword =
+          document.forms["registrationForm"]["confirm_password"].value;
+
+        var errorMessage = "";
+
+        // Check if all fields are not empty
+        if (
+          firstName === "" ||
+          lastName === "" ||
+          phoneNumber === "" ||
+          password === "" ||
+          confirmPassword === ""
+        ) {
+          errorMessage += "All fields are required.\n";
+        }
+
+        // Check if the phone number contains only numbers
+        if (isNaN(phoneNumber)) {
+          errorMessage += "Phone number should contain only numbers.\n";
+        }
+
+        // Validate the length of the phone number
+        if (phoneNumber.length > 10) {
+          errorMessage += "Phone number should not exceed 10 digits.\n";
+        }
+
+        // Check if the password fields match
+        if (password !== confirmPassword) {
+          errorMessage += "Passwords do not match.\n";
+        }
+
+        if (errorMessage !== "") {
+          alert(errorMessage);
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        background-image: url("../Images/straw hats background.png");
+        background-size: cover;
+      }
+
+      h2 {
+        text-align: center;
+        background-color: white;
+        width: 10%;
+        color: #333;
+        margin-left: 45%;
+      }
+
+      form {
+        width: 20%;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+        width: 100%;
+      }
+
+      table td {
+        padding: 10px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 40%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      footer{
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+        <a href="/amaan website/index.html">Home</a>
+        <a href="/amaan website/about us .html">About Us</a>
+        <a href="/amaan website/Contact us .html">Contact us</a>
+        <a href="/amaan website/packages.html">Packages</a>
+        <a href="/amaan website/sign up.html">Sign up</a>
+      <a href="/amaan website/services.html">Services</a>
+      <a href="/amaan website/login.html">Login</a>
+    </nav>
+    <div id="log">
+      <img src="/amaan website/rnn.png" id="image2" alt="Image 1" />
+    </div>
+    <h2>Sign up</h2>
+    <form
+      name="registrationForm"
+      onsubmit="return validateForm()"
+      method="post"
+    >
+      <table>
+        <tr>
+          <td>First Name:</td>
+          <td><input type="text" name="first_name" /></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td><input type="text" name="last_name" /></td>
+        </tr>
+        <tr>
+          <td>Phone Number:</td>
+          <td><input type="text" name="phone_number" /></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+          <td>Confirm Password:</td>
+          <td><input type="password" name="confirm_password" /></td>
+        </tr>
+      </table>
+      <br />
+      <a href="/awais website/"><input type="submit" value="Register" /></a>
+    </form>
+    <footer>
+      <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
